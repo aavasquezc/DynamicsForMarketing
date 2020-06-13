@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- file name should only contain alpha-numeric characters and underscore -->
+<!-- format: <fileNamePrefix>CustomerJourneyDesignerTileConfig.xml> -->
+<LibraryTile>
+  <!-- mandatory -->
+  <!-- icon: CSS class defining your tile icon-->
+  <!-- fontFamily: CSS class defining font-family for your icon-->
+  <!-- cssFileName: your CSS file name in CRM-->
+  <Definition icon="innovar_SmstwilioTile" fontFamily="innovar_SmstwilioTileSymbolFont" cssFileName="innovar_SmstwilioTileCustomerJourneyDesignerTileConfig.css" />
+  <!-- mandatory -->
+  <ChannelProperties>
+    <!-- mandatory -->
+    <EntityType>innovar_smstwiliotemplate</EntityType>
+    <EntitySetName>innovar_smstwiliotemplates</EntitySetName>
+    <TitleFieldName>innovar_name</TitleFieldName>
+    <ComplianceField>donotphone</ComplianceField>
+    <!-- optional -->
+    <!-- Lookup view id for your entity-->
+    <LookupViewId>1D8535F7-55D4-42B8-BAD1-76B8419188FC</LookupViewId>
+	<!--Insights form id for your entity -->
+    <InsightsMainFormId>2B3BF78C-1651-4D04-BD3A-96DAB004F985</InsightsMainFormId>
+    <!--Quick view form id for your entity -->
+    <QuickViewFormId>19B3483B-6212-4073-A783-7E15A3CEC47A</QuickViewFormId>
+  </ChannelProperties>
+   <!-- optional -->
+  <ResponseTypes>
+    <ResponseType id="sent">
+      <Labels>
+        <!-- Labels should always have a Label for 1033 -->
+        <Label locId="1033">Sent</Label>
+        <Label locId="1031">[Sent]</Label>
+      </Labels>
+    </ResponseType>
+    <ResponseType id="delivered">
+      <Labels>
+        <!-- Labels should always have a Label for 1033 -->
+        <Label locId="1033">Delivered</Label>
+        <Label locId="1031">[Delivered]</Label>
+      </Labels>
+    </ResponseType>
+    <ResponseType id="keyword" custom="True">
+      <!-- there should be only one response type with attribute custom=true -->
+      <Labels>
+        <!-- Labels should always have a Label for 1033 -->
+        <Label locId="1033">Keyword match</Label>
+        <Label locId="1031">[Keyword match]</Label>
+      </Labels>
+    </ResponseType>
+  </ResponseTypes>
+  <!-- mandatory -->
+  <Labels>
+    <!-- Labels should always have a Label for 1033 -->
+    <Label locId="1033">Twilio SMS Message</Label>
+    <Label locId="1031">[Twilio SMS Message]</Label>
+  </Labels>
+  <!-- mandatory -->
+  <Tooltips>
+    <!-- Tooltips should always have a tooltip for 1033 -->
+    <!-- mandatory -->
+    <Tooltip locId="1033">Send a text message.</Tooltip>
+    <!-- optional -->
+    <Tooltip locId="1031">[Send a text message.]</Tooltip>
+  </Tooltips>
+</LibraryTile>
